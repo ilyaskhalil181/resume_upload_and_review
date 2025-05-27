@@ -1,0 +1,112 @@
+body {
+    background: #f1f5f9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.container {
+    background: #fff;
+    padding: 32px 40px 30px 40px;
+    border-radius: 14px;
+    box-shadow: 0 4px 28px rgba(33, 60, 110, 0.12);
+    width: 440px;
+    text-align: center;
+}
+h1 {
+    color: #2563eb;
+    margin-bottom: 18px;
+    font-size: 1.4em;
+}
+.screen {
+    margin-top: 16px;
+}
+.dash-btn {
+    padding: 11px 0;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.08em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.dash-btn:disabled {
+    background: #a5b4fc;
+    cursor: not-allowed;
+}
+.dash-btn:hover:enabled {
+    background: #1741a6;
+}
+.usecase-section h2 {
+    color: #1741a6;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.08em;
+}
+input[type="file"] {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+button {
+    padding: 9px 18px;
+    margin: 6px 3px 10px 3px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:disabled {
+    background: #a5b4fc;
+    cursor: not-allowed;
+}
+button:hover:enabled {
+    background: #1741a6;
+}
+.fileName, .adminFileName {
+    margin: 6px 0 8px 0;
+    color: #0d1a35;
+    font-size: 0.97em;
+    word-break: break-all;
+    display: block;
+}
+textarea {
+    width: 96%;
+    min-height: 46px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+    padding: 8px;
+    font-size: 1em;
+    resize: vertical;
+}
+.message {
+    margin-top: 7px;
+    color: #b91c1c;
+    font-size: 0.97em;
+    min-height: 20px;
+}
+.message.success { color: #15803d; }
+.notify {
+    margin-top: 10px;
+    color: #2563eb;
+    font-size: 0.97em;
+}
+label, select {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.uc-btns {
+    margin-top: 10px;
+}
+.uc-btns button {
+    margin-right: 10px;
+}

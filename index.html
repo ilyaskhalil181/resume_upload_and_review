@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InternLink Resume Module</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>InternLink Resume Module</h1>
+    <div id="roleSelect">
+        <label>Select Role:
+            <select id="role" onchange="showDashboard()">
+                <option value="user">User</option>
+                <option value="admin">Admin/HR</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- DASHBOARD SCREEN -->
+    <div id="dashboardScreen" class="screen">
+        <button class="dash-btn" onclick="navigateTo('uploadScreen')">Upload Resume</button>
+        <button class="dash-btn" onclick="navigateTo('reviewScreen')">Review Resume</button>
+        <button class="dash-btn" onclick="navigateTo('editScreen')">Edit Resume</button>
+        <button class="dash-btn" onclick="navigateTo('downloadScreen')">Download Resume</button>
+    </div>
+
+    <!-- UPLOAD SCREEN -->
+    <div id="uploadScreen" class="screen" style="display:none">
+        <h2>Upload Resume</h2>
+        <input type="file" id="resumeInput" accept=".pdf,.docx">
+        <span class="fileName" id="uploadFileName"></span>
+        <div id="uploadMessage" class="message"></div>
+        <div class="uc-btns">
+            <button onclick="submitUpload()">Upload</button>
+            <button onclick="showDashboard()">Back to Dashboard</button>
+        </div>
+    </div>
+
+    <!-- REVIEW SCREEN -->
+    <div id="reviewScreen" class="screen" style="display:none">
+        <h2>Review Resume</h2>
+        <div id="adminReviewContent"></div>
+        <div class="uc-btns">
+            <button onclick="showDashboard()">Back to Dashboard</button>
+        </div>
+    </div>
+
+    <!-- EDIT SCREEN -->
+    <div id="editScreen" class="screen" style="display:none">
+        <h2>Edit Resume</h2>
+        <input type="file" id="editInput" accept=".pdf,.docx">
+        <span class="fileName" id="editFileName"></span>
+        <div id="editMessage" class="message"></div>
+        <div class="uc-btns">
+            <button onclick="submitEdit()" id="editBtn">Re-upload</button>
+            <button onclick="showDashboard()">Back to Dashboard</button>
+        </div>
+    </div>
+
+    <!-- DOWNLOAD SCREEN -->
+    <div id="downloadScreen" class="screen" style="display:none">
+        <h2>Download Resume</h2>
+        <span class="fileName" id="downloadFileName"></span>
+        <div id="downloadMessage" class="message"></div>
+        <div class="uc-btns">
+            <button onclick="downloadResume()" id="downloadBtn">Download</button>
+            <button onclick="showDashboard()">Back to Dashboard</button>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
